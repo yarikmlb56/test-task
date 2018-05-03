@@ -1,0 +1,25 @@
+<nav mat-tab-nav-bar>
+  <a mat-tab-link
+     routerLink="./top-20-movies"
+     routerLinkActive="mat-tab-link--active"
+     #top20LinkActive="routerLinkActive"
+     [active]="top20LinkActive.isActive">
+    TOP 20 MOVIES
+  </a>
+
+  <a mat-tab-link
+     routerLink="./favorite-movies"
+     routerLinkActive="mat-tab-link--active"
+     #favoriteMoviesLinkActive="routerLinkActive"
+     [active]="favoriteMoviesLinkActive.isActive">
+    FAVORITE MOVIES
+  </a>
+
+  <a mat-tab-link
+     routerLink="./movies-on-decades"
+     routerLinkActive="mat-tab-link--active"
+     #decadeMoviesLinkActive="routerLinkActive"
+     [active]="decadeMoviesLinkActive.isActive">
+    MOVIES ON DECADE
+  </a>
+</nav>

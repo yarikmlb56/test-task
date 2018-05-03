@@ -3,8 +3,12 @@ interface IMyApiResponse {
     version: string,
     serverTime: string
   };
-  data: {
+  data?: {
     movies?: IMovie[],
-
+    trailer?: ITrailer[]
+  };
+  error?: {
+    code: number,
+    message: string
   };
 }

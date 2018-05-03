@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 
-import { Top20MoviesComponent } from './src/top-20-movies/top-20-movies.component';
-import { FavoriteMoviesComponent } from './src/favorite-movies/favorite-movies.component';
-import { MoviesDecadesComponent } from './src/movies-decades/movies-decades.component';
+import { Top20MoviesComponent } from './components/top-20-movies/top-20-movies.component';
+import { FavoriteMoviesComponent } from './components/favorite-movies/favorite-movies.component';
+import { MoviesDecadesComponent } from './components/movies-decades/movies-decades.component';
 
 
 export const appRoutes: Routes = [

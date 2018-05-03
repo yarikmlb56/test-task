@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{ data.movie.title }}</h2>
+<mat-dialog-content>
+  <mat-tab-group *ngIf="!isLoading">
+    <mat-tab *ngFor="let trailer of trailers"
+             [label]="trailer.title">
+      <div [innerHTML]="trailer.embed | safeHtml"></div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <app-loader-component *ngIf="isLoading"></app-loader-component>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button
+          color="primary"
+          (click)="closeModal()">
+    Close
+  </button>
+</mat-dialog-actions>

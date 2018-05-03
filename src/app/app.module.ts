@@ -3,21 +3,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { MatCardModule, MatTooltipModule } from '@angular/material';
 
-import './src/rxjs-operators';
+import './shared/rxjs-operators';
 
 import { appRoutes } from './routes';
 
 import { AppComponent } from './app.component';
-import { FilmsService } from './src/services/films.service';
-import { NavigationComponent } from './src/navigation/navigation.component';
-import { Top20MoviesComponent } from './src/top-20-movies/top-20-movies.component';
-import { FavoriteMoviesComponent } from './src/favorite-movies/favorite-movies.component';
-import { MoviesDecadesComponent } from './src/movies-decades/movies-decades.component';
-import { WindowService } from './src/services/window.service';
-import { LoaderComponent } from './src/loader/loader.component';
-import { LocalStorageService } from './src/services/local-storage.service';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { Top20MoviesComponent } from './components/top-20-movies/top-20-movies.component';
+import { FavoriteMoviesComponent } from './components/favorite-movies/favorite-movies.component';
+import { MoviesDecadesComponent } from './components/movies-decades/movies-decades.component';
+import { LoaderComponent } from './shared/components/loader/loader.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -27,21 +24,15 @@ import { LocalStorageService } from './src/services/local-storage.service';
     Top20MoviesComponent,
     FavoriteMoviesComponent,
     MoviesDecadesComponent,
-    LoaderComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatCardModule,
-    MatTooltipModule,
+    SharedModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [
-    FilmsService,
-    WindowService,
-    LocalStorageService,
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

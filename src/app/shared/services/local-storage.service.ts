@@ -19,4 +19,13 @@ export class LocalStorageService {
   public removeFromStorage(itemId: string): void {
     localStorage.removeItem(itemId);
   }
+
+  public getItems(): IMovie[] {
+    const movies: IMovie[] = [];
+
+    for (let i = 0; i < localStorage.length; i++) {
+      movies.push(JSON.parse(localStorage.getItem(localStorage.key(i))));
+    }
+    return movies;
+  }
 }

@@ -1,0 +1,9 @@
+<div *ngIf="!isLoading">
+  <app-movie-card-component [movies]="movies"
+                            (removeFromFavoriteList)="removeFromFavorite($event)"
+                            (addToFavoriteList)="addToFavorite($event)"
+                            (openPreviewDialog)="openTrailerModal($event)">
+  </app-movie-card-component>
+</div>
+
+<app-loader-component *ngIf="isLoading"></app-loader-component>
