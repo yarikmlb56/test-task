@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
 import './shared/rxjs-operators';
 
@@ -13,7 +13,6 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { Top20MoviesComponent } from './components/top-20-movies/top-20-movies.component';
 import { FavoriteMoviesComponent } from './components/favorite-movies/favorite-movies.component';
 import { MoviesDecadesComponent } from './components/movies-decades/movies-decades.component';
-import { LoaderComponent } from './shared/components/loader/loader.component';
 import { SharedModule } from './shared/shared.module';
 
 
@@ -29,6 +28,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HttpClientJsonpModule,
     SharedModule,
     RouterModule.forRoot(appRoutes)
   ],
