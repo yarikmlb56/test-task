@@ -9,8 +9,10 @@ export class MovieService {
 
   public _movies$: Observable<IMovie[]>;
 
-  private readonly _URL: string = 'http://www.myapifilms.com/imdb/top?start=1&end=20&token=dd2d4b1b-b9a7-40e6-bb36-f9680f00f93f&format=json&data=1&callback=JSONP_CALLBACK';
-  private readonly _TRAILERS_URL: string = 'http://www.myapifilms.com/trailerAddict/taapi?token=dd2d4b1b-b9a7-40e6-bb36-f9680f00f93f&count=8&credit=&format=json&callback=JSONP_CALLBACK&film=';
+  private readonly _URL: string = 'http://www.myapifilms.com/imdb/top?start=1&end=20&token=dd2d4b1b-b9a7-40e6-bb36-f9680f00f93f&' +
+    'format=json&data=1&callback=JSONP_CALLBACK';
+  private readonly _TRAILERS_URL: string = 'http://www.myapifilms.com/trailerAddict/taapi?token=dd2d4b1b-b9a7-40e6-bb36-f9680f00f93f&' +
+    'count=8&credit=&format=json&callback=JSONP_CALLBACK&film=';
 
   public constructor(
     private _http: HttpClient,
